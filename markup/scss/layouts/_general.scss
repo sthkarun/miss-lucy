@@ -1,0 +1,53 @@
+a,
+button,
+input[type="submit"] {
+	@include animate(color background opacity visibility border);
+} 
+
+
+body {
+	min-width: 320px;
+
+	@include media('>=tablet') {
+		@include font(18px,35px);
+	}
+}
+
+#wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	border: none;
+}
+
+.container {
+	@extend %clearfix;
+	width: auto !important;
+	max-width: 1170px;
+	padding: 0 15px;
+}
+
+.section {
+	padding: 35px 0;
+
+	&.section--big-padding {
+		padding: 95px 0;
+	}
+}
+
+h1 {
+	margin: 0 0 15px;
+}
+
+h2 {
+	margin: 0 0 15px;
+}
+
+h3 {
+	margin: 0 0 15px;	
+}

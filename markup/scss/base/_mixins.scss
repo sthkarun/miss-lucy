@@ -39,7 +39,7 @@
     vertical-align: $valign;
     width: $width1; 
   }
- .#{$child-name2} {
+  .#{$child-name2} {
     display: table-cell;
     vertical-align: $valign;
     width: $width2;
@@ -250,10 +250,20 @@ $animation-speed: .3s !default;
 /// Font-size px to rem calc
 /// @example scss - Usage
 /// selector {
-///    @include rem-font-size(16px);
+  ///    @include rem-font-size(16px);
 /// }
 
 @mixin rem-font-size($pxSize) {
   font-size: $pxSize;
   font-size: ($pxSize / 10px) + rem;
+}
+
+@mixin font($font, $height) {
+  line-height: $height;
+  font-size: $font;
+}
+
+@mixin display($align: top) {
+  display: inline-block;
+  vertical-align: $align;
 }

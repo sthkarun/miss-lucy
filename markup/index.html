@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Project Title</title>
+	<title>Miss Lusy</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -12,19 +12,26 @@
 		<header id="header">
 			<div class="container">
 				<nav id="nav">
-					<ul>
-						<li><a href="#">露西小姐 </a></li>
-						<li>
-							<a href="#">露西分享</a>
+					<a href="#" class="nav-opener"><span class="opener"></span></a>
+					<div class="nav__drop">
+						<div class="nav__wrap">
+							<a href="#" class="nav-opener"></a>
+							<span class="lang">简体</span>
 							<ul>
-								<li><a href="#">兩性/生活</a></li>
-								<li><a href="#">旅遊/美食</a></li>
-								<li><a href="#">露西 影片</a></li>
+								<li><a href="#">露西小姐 </a></li>
+								<li>
+									<a href="#">露西分享</a>
+									<ul>
+										<li><a href="#">兩性/生活</a></li>
+										<li><a href="#">旅遊/美食</a></li>
+										<li><a href="#">露西 影片</a></li>
+									</ul>
+								</li>
+								<li><a href="#">好康活動</a></li>
+								<li><a href="#">合作邀約</a></li>
 							</ul>
-						</li>
-						<li><a href="#">好康活動</a></li>
-						<li><a href="#">合作邀約</a></li>
-					</ul>
+						</div>
+					</div>
 				</nav>
 				<div class="header-area">
 					<ul class="social-networks">
@@ -32,12 +39,15 @@
 						<li><a href="#"><span class="icon-youtube"></span></a></li>
 						<li><a href="#"><span class="icon-instagram"></span></a></li>
 						<li><a href="#"><span class="icon-message"></span></a></li>
-						<li><a href="#"><span class="icon-chat"></span></a></li>
-						<li><a href="#"><span class="icon-miho"></span></a></li>
+						<li><a href="#"><span class="icon-bubbles"></span></a></li>
+						<li><a href="#"><span class="icon-weibo"></span></a></li>
 					</ul>
 					<span class="language">简体</span>
 				</div>
-				
+				<form class="search-form" action="#">
+					<input type="search" class="form-control" placeholder="Search for articles...">
+					<button><span class="icon-search"></span></button>
+				</form>
 			</div>
 		</header>
 		<main id="main" role="main">
@@ -47,22 +57,29 @@
 						<img src="images/img1.png" alt="image description">
 					</div>
 					<div class="banner__text">
-						<span class="banner__info">喜歡，所有感動的一切，這就是「露西小姐」</span>
 						<span class="banner__slogn">Like, all touched everything</span>
 						<div class="logo">
-							<a href="#"><img src="images/logo.svg" alt="image description"></a>
+							<a href="#">
+								<span class="logo__img"><img src="images/logo-black.png" alt="image description"></span>
+								<span class="logo__text"><span class="big">T</span>his is <span class="big">M</span>iss <span class="big">L</span>ucy ,</span>
+							</a>
 						</div>
+						<span class="banner__info">喜歡，所有感動的一切，這就是「露西小姐」</span>
 					</div>
 				</div>
 			</section>
-			<section class="section">
+			<section class="section section--big-padding">
 				<div class="container">
 					<div class="heading">
 						<h1 class="heading-1">露西小姐愛分享</h1>
 						<span class="heading__sub">Miss Lucy loves to share</span>
 					</div>
-					<p>熱愛分享溫暖、兩性、生命、生活、家庭話題，喜歡品香檳、喜歡旅遊、喜歡拍照、喜歡穿著混搭的時尚風格、喜歡做菜</p>
-					<p>This is Miss Lucy loves to share the warmth with men and women, life, and family topics. Enjoys champagne and cooking,travelling and photography, wears fusion fashion styles... And all heart-touching things in life.</p>
+					<div class="text-block">
+						<p>熱愛分享溫暖、兩性、生命、生活、家庭話題，喜歡品香檳、喜歡旅遊、喜歡拍照、喜歡穿著混搭的時尚風格、喜歡做菜</p>
+						<div class="big-text">
+							<p >This is Miss Lucy loves to share the warmth with men and women, life, and family topics. Enjoys champagne and cooking,travelling and photography, wears fusion fashion styles... And all heart-touching things in life.</p>
+						</div>
+					</div>
 				</div> 
 				<div class="image">
 					<div class="row">
@@ -104,6 +121,100 @@
 			<section class="section">
 				<div class="container">
 					<div class="two-columns">
+						<div class="sidebar">
+							<form class="search-form search-from--sidebar" action="#">
+								<input type="search" placeholder="Search for articles...">
+								<button type="submit"><span class="icon-search"></span></button>
+							</form>
+							<div class="sidebar__post">
+								<div class="sidebar__img">
+									<img src="images/img13.jpg" alt="image description">
+								</div>
+								<h2 class="heading-2">露西小姐 <a href="#" class="mail"><span class="icon-mail"></span></a></h2>
+								<div class="sidebar__text">
+									<p>手足之情，得來不易，莫等失 去才後悔當初⋯⋯⋯ 祝福我愛、愛我的你（妳）， 不要等到失去後才發現原來家 人才是最重要的愛</p>
+								</div>
+							</div>
+							<ul class="social-networks social-networks--sidebar">
+								<li><a href="#"><span class="icon-facebook"></span></a></li>
+								<li><a href="#"><span class="icon-youtube"></span></a></li>
+								<li><a href="#"><span class="icon-instagram"></span></a></li>
+								<li><a href="#"><span class="icon-message"></span></a></li>
+								<li><a href="#"><span class="icon-bubbles"></span></a></li>
+								<li><a href="#"><span class="icon-weibo"></span></a></li>
+							</ul>
+							<div class="sidebar_post hidden-xs hidden-sm">
+								<ul>
+									<li>
+										<a href="#">兩性/生活</a>
+										<div class="drop">
+											<ul>
+												<li><a href="#">生活就是這樣</a></li>
+												<li><a href="#">左手換右手好嗎？</a></li>
+												<li><a href="#">我找到能替你照顧我的人</a></li>
+												<li><a href="#">單身的時候你是不是跟我一樣?</a></li>
+												<li><a href="#">你被叫去相親過嗎?</a></li>
+												<li><a href="#">年輕人不可不知道的職場五小事</a></li>
+												<li><a href="#">職場最要不得！5種你必須遠離的</a></li>
+												<li><a href="#">誰說個性內向就吃虧？</a></li>
+												<li><a href="#">聰明人都裝傻 傻子才裝聰明</a></li>
+												<li><a href="#">意氣能屈能伸 膽子可大可小</a></li>
+											</ul>
+											<a href="#" class="more"></a>
+										</div>
+									</li>
+									<li>
+										<a href="#">旅遊/美食</a>
+										<div class="drop">
+											<ul>
+												<li><a href="#">日本自助旅行分享與教學</a></li>
+												<li><a href="#">去東京前必讀聖經必做功課</a></li>
+												<li><a href="#">玩 台南</a></li>
+												<li><a href="#">環島之星~易遊網X台鐵</a></li>
+												<li><a href="#">墾丁藝術家駐村創造生態旅遊</a></li>
+												<li><a href="#">the kitchen table 西餐廳</a></li>
+												<li><a href="#">小酌之家：澎湃美味的台式小店</a></li>
+												<li><a href="#">令人驚艷的新式印度料理</a></li>
+												<li><a href="#">頗具巧思的新美式料理</a></li>
+												<li><a href="#">料好實在的日式無菜單料理</a></li>
+											</ul>
+											<a href="#" class="more"></a>
+										</div>
+									</li>
+									<li>
+										<a href="#">香檳-</a>
+										<div class="drop">
+											<ul>
+												<li><a href="#">慢的美學 品酒入門</a></li>
+												<li><a href="#">香檳！助興最佳催化飲料</a></li>
+												<li><a href="#">香檳色澤的微奢華新美學</a></li>
+												<li><a href="#">挑選╳品嘗╳搭配</a></li>
+												<li><a href="#">「敬」歡樂！</a></li>
+												<li><a href="#">兩個有趣的香檳小秘密</a></li>
+												<li><a href="#">香檳氣泡酒找不同</a></li>
+												<li><a href="#">開香檳的聲音也有學問</a></li>
+												<li><a href="#">看杯型如何影響酒的口感</a></li>
+												<li><a href="#">婚禮香檳塔的佈置與學問</a></li>
+											</ul>
+											<a href="#" class="more"></a>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="sidebar_post hidden-xs hidden-sm">
+								<ul class="img-list">
+									<li class="img-list__item">
+										<a href="#" class="img-list__link"><img src="images/img13.jpg" alt="image description"></a>
+									</li>
+									<li class="img-list__item">
+										<a href="#" class="img-list__link"><img src="images/img14.jpg" alt="image description"></a>
+									</li>
+									<li class="img-list__item">
+										<a href="#" class="img-list__link"><img src="images/img15.jpg" alt="image description"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
 						<div class="content">
 							<div class="post">
 								<div class="post__item">
@@ -177,101 +288,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="sidebar">
-							<ul class="social-networks">
-								<li><a href="#"><span class="icon-facebook"></span></a></li>
-								<li><a href="#"><span class="icon-youtube"></span></a></li>
-								<li><a href="#"><span class="icon-instagram"></span></a></li>
-								<li><a href="#"><span class="icon-message"></span></a></li>
-								<li><a href="#"><span class="icon-chat"></span></a></li>
-								<li><a href="#"><span class="icon-miho"></span></a></li>
-							</ul>
-							<form class="search-form" action="#">
-								<div class="form-group">
-									<input type="search" placeholder="Search for articles...">
-									<button type="submit"><span class="icon-search"></span></button>
-								</div>
-							</form>
-							<div class="sidebar__post">
-								<div class="sidebar__img">
-									<img src="images/img12.jpg" alt="image description">
-								</div>
-								<h2 class="heading-2">露西小姐</h2>
-								<p>手足之情，得來不易，莫等失 去才後悔當初⋯⋯⋯ 祝福我愛、愛我的你（妳）， 不要等到失去後才發現原來家 人才是最重要的愛</p>
-								<a href="#"><span class="icon-mail"></span></a>
-							</div>
-							<div class="sidebar_post">
-								<ul>
-									<li>
-										<a href="#">兩性/生活</a>
-										<div class="drop">
-											<ul>
-												<li><a href="#">生活就是這樣</a></li>
-												<li><a href="#">左手換右手好嗎？</a></li>
-												<li><a href="#">我找到能替你照顧我的人</a></li>
-												<li><a href="#">單身的時候你是不是跟我一樣?</a></li>
-												<li><a href="#">你被叫去相親過嗎?</a></li>
-												<li><a href="#">年輕人不可不知道的職場五小事</a></li>
-												<li><a href="#">職場最要不得！5種你必須遠離的</a></li>
-												<li><a href="#">誰說個性內向就吃虧？</a></li>
-												<li><a href="#">聰明人都裝傻 傻子才裝聰明</a></li>
-												<li><a href="#">意氣能屈能伸 膽子可大可小</a></li>
-											</ul>
-											<a href="#" class="more"></a>
-										</div>
-									</li>
-									<li>
-										<a href="#">旅遊/美食</a>
-										<div class="drop">
-											<ul>
-												<li><a href="#">日本自助旅行分享與教學</a></li>
-												<li><a href="#">去東京前必讀聖經必做功課</a></li>
-												<li><a href="#">玩 台南</a></li>
-												<li><a href="#">環島之星~易遊網X台鐵</a></li>
-												<li><a href="#">墾丁藝術家駐村創造生態旅遊</a></li>
-												<li><a href="#">the kitchen table 西餐廳</a></li>
-												<li><a href="#">小酌之家：澎湃美味的台式小店</a></li>
-												<li><a href="#">令人驚艷的新式印度料理</a></li>
-												<li><a href="#">頗具巧思的新美式料理</a></li>
-												<li><a href="#">料好實在的日式無菜單料理</a></li>
-											</ul>
-											<a href="#" class="more"></a>
-										</div>
-									</li>
-									<li>
-										<a href="#">香檳-</a>
-										<div class="drop">
-											<ul>
-												<li><a href="#">慢的美學 品酒入門</a></li>
-												<li><a href="#">香檳！助興最佳催化飲料</a></li>
-												<li><a href="#">香檳色澤的微奢華新美學</a></li>
-												<li><a href="#">挑選╳品嘗╳搭配</a></li>
-												<li><a href="#">「敬」歡樂！</a></li>
-												<li><a href="#">兩個有趣的香檳小秘密</a></li>
-												<li><a href="#">香檳氣泡酒找不同</a></li>
-												<li><a href="#">開香檳的聲音也有學問</a></li>
-												<li><a href="#">看杯型如何影響酒的口感</a></li>
-												<li><a href="#">婚禮香檳塔的佈置與學問</a></li>
-											</ul>
-											<a href="#" class="more"></a>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="sidebar_post">
-								<ul class="img-list">
-									<li class="img-list__item">
-										<a href="#" class="img-list__link"><img src="images/img13.jpg" alt="image description"></a>
-									</li>
-									<li class="img-list__item">
-										<a href="#" class="img-list__link"><img src="images/img14.jpg" alt="image description"></a>
-									</li>
-									<li class="img-list__item">
-										<a href="#" class="img-list__link"><img src="images/img15.jpg" alt="image description"></a>
-									</li>
-								</ul>
-							</div>
-						</div>
 					</div>
 				</div>
 			</section>
@@ -283,8 +299,8 @@
 					<li><a href="#"><span class="icon-youtube"></span></a></li>
 					<li><a href="#"><span class="icon-instagram"></span></a></li>
 					<li><a href="#"><span class="icon-message"></span></a></li>
-					<li><a href="#"><span class="icon-chat"></span></a></li>
-					<li><a href="#"><span class="icon-miho"></span></a></li>
+					<li><a href="#"><span class="icon-bubbles"></span></a></li>
+					<li><a href="#"><span class="icon-weibo"></span></a></li>
 				</ul>
 				<span class="copyright">&copy; Copyright of Lucyliu</span>
 			</div>

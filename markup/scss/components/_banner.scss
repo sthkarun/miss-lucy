@@ -1,0 +1,83 @@
+.banner {
+	background: url(images/bg-banner.jpg) no-repeat 50% 50% / cover;
+	padding: 20px 0 0;
+	position: relative;
+	@include v-align(400px,bottom);
+	width: 100%;
+
+	@include media('>=tablet') {
+		@include v-align(724px,bottom);
+	}
+
+	.container {
+		width: 100% !important;
+		max-width: none;
+		position: relative;
+	}
+
+
+	img {
+		max-width: none;
+		width: 100%;
+	}
+}
+
+.banner__img {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 320px;
+
+	@include media('>=tablet') {
+		width: auto;
+		 left: -16.3%; 
+		 right: 37.6%;
+	}
+}
+
+.banner__text {
+	position: relative;
+	z-index: 2;
+	@include font(20px,26px);
+	padding: 0 0 85px;
+}
+
+.banner__slogn {
+	font: 30px/40px FreestyleScript;
+	@include display(bottom);
+}
+
+.banner__info {
+	display: block;
+}
+
+.logo {
+	width: 270px;
+	@include display;font: 50px/55px $font-free;
+	color: $black;
+	text-decoration: none;
+	margin-right: -35px;
+	letter-spacing: -1px;
+
+	.big {
+		font-size: 57px;
+		letter-spacing: 1px;
+	}
+
+	a {
+		color: $black;
+		text-decoration: none;
+	}
+
+	img {
+		max-width: none;
+		width: 100%;
+	}
+}
+
+.logo__img {
+		max-width: 165px;
+		display: block;
+		margin: 0 0  -9px 4px ;
+	}

@@ -15,7 +15,7 @@ Theme URI:
 $breakpoints: (
   xs-phone: 320px,
   phone: 480px,
-  tablet: 768px,
+  tablet: 750px,
   desktop: 1024px,
   widescreen: 1300px
 );
@@ -34,6 +34,8 @@ $media-expressions: (
 // ligatured operators ≥ ≤
 
 @import 'vendors/include-media';
+@import 'vendors/icomoon';
+@import 'vendors/fontface';
 
 @import "bootstrap-custom";
 @import "vendors/bootstrap/variables";

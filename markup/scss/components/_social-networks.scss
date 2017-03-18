@@ -1,0 +1,28 @@
+.social-networks {
+	@extend %listreset;
+	text-align: right;
+
+	@include media('>=desktop') {
+		
+		display: block;
+	}
+
+	li {
+		@include display;
+		padding: 0 6px;
+	}
+
+	a {
+		color: #bfbfbf;
+		font-size: 23px;
+		text-decoration: none;
+
+		&:hover {
+			color: #836f2e;
+		}
+	}
+
+	&.social-networks--sidebar {
+		text-align: center;
+	}
+}

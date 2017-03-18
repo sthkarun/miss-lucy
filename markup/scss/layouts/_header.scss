@@ -1,0 +1,43 @@
+#header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	top: 0;
+	padding: 15px 0;
+	z-index: 99;
+
+	@include media('>=tablet') {
+		padding: 54px 0;
+	}
+
+	+ * {
+		padding-top: 60px;
+
+		> .banner {
+			margin-top: -60px;
+			padding-top: 60px;
+		}
+	}
+
+	.container {
+		position: relative;
+	}
+
+	.social-networks {
+		display: none;
+	}
+}
+
+.header-area {
+	float: left;
+	width: 40px;
+}
+
+.language {
+	left: 63px;
+	position: absolute;
+	top: 0;
+	font-size: 17px;
+}
+

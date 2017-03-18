@@ -1,0 +1,150 @@
+
+.nav-opener {
+	@include size(23px, 19px);
+	position: absolute;
+	top: 20px;
+	display: block;
+	height: 20px;
+	right: 15px;
+	top: 19px;
+
+	@include media('>=tablet') {
+		    right: 61px;
+    top: -6px;
+    height: 38px;
+    width: 57px;
+	}
+
+	
+	span,
+	&:before,
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: #444143;
+		transition: 0.4s ease;
+		border-radius: 2px;
+
+		@include media('>=tablet') {
+			height: 7px;
+		}
+	}
+
+	&:before,
+	&:after {
+		content: '';
+	}
+
+	&:after {
+		top: auto;
+		bottom: 0;
+	}
+
+	span {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+#nav {
+
+}
+
+.nav-active {
+	overflow: hidden;
+}
+
+.nav__drop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	max-height: 0;
+	overflow: hidden;
+	@include animate(max-height);
+	bottom: 100px;
+	bottom: 0;
+
+	.nav-active & {
+		max-height: 9999px;
+	}
+	.nav-opener {
+		span {
+			opacity: 0;
+			background: $white;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+			top: 9px;
+			background: $white;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+			top: auto;
+			bottom: 8px;
+			background: $white;
+		}
+	}
+
+}
+
+.nav__wrap {
+	transform: translateY(-100%);
+	background: rgba(173, 138, 62, 0.5);
+	@include animate(transform);
+	height: 100%;
+
+	.nav-active & {
+		transform: translateY(0);
+	}
+
+	> ul {
+		@extend %listreset;
+		@include font(20px,28px);
+		text-align: center;
+		padding: 60px 15px;
+
+		> li {
+
+			&.hover {
+				> a {	
+					background: #ad8a3e;
+					border-color: transparent;
+				}
+			}
+
+			> a {
+				color: $white;
+				display: block;
+				padding: 7px 15px;
+				text-decoration: none;
+				border-bottom: 1px solid $white;
+			}
+		}
+
+		ul {
+			@extend %listreset;
+			@include font(16px,24px);
+
+			li {
+				border-bottom: 1px solid $white;
+			}
+
+			a {
+				color: $white;
+				padding: 4px 15px;
+				text-decoration: none;
+				display: block;
+
+				&:hover {
+					background: darken(#ad8a3e, 20%);
+				}
+			}
+		}
+	}
+}
