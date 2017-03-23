@@ -24,10 +24,10 @@
 
 .banner__img {
 	position: absolute;
-	left: 0;
 	bottom: 0;
 	right: 0;
 	width: 320px;
+	left: -130px;
 
 	@include media('>=tablet') {
 		width: auto;
