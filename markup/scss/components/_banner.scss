@@ -9,10 +9,14 @@
 		@include v-align(724px,bottom);
 	}
 
+	@include media('>=desktop') {
+		@include v-align(745px,bottom);
+	}
+
 	.container {
-		width: 100% !important;
-		max-width: none;
+		height: 100%;
 		position: relative;
+		width: 100% !important;
 	}
 
 
@@ -31,43 +35,108 @@
 
 	@include media('>=tablet') {
 		width: auto;
-		 left: -16.3%; 
-		 right: 37.6%;
+		left: -16.3%; 
+		right: 37.6%;
+		max-width: 600px;
+	}
+
+	@include media('>=desktop') {
+		left: -8.3%;
+		max-width: 507px;
+	}
+
+	@include media('>=widescreen') {
+		left: -9.9%;
 	}
 }
 
 .banner__text {
 	position: relative;
 	z-index: 2;
-	@include font(20px,26px);
-	padding: 0 0 85px;
+	@include font(14px,26px);
+	padding: 0 0 15px;
+	max-width: 290px;
+	margin: 0 auto;
+
+	@include media('>=tablet') {
+		padding: 0 0 85px;
+		@include font(20px,26px);
+		max-width: none;
+		margin: 0;
+	}
+
+	@include media('>=desktop') {
+		padding: 0 0 79px 218px;
+		color: $white;
+	}
+
+	@include media('>=widescreen') {
+		text-align: right;
+		padding: 0 14px 281px 218px;
+	}
 }
 
 .banner__slogn {
 	font: 30px/40px FreestyleScript;
 	@include display(bottom);
+	margin: 0 0 -50px -73px;
+
+	@include media('>=tablet') {
+		margin: 0;
+	}
+
+	@include media('>=desktop') {
+		@include font(32px,40px);
+	}
 }
 
 .banner__info {
 	display: block;
+
+	@include media('>=desktop') {
+		font-size: 20px;
+		left: 166px;
+		line-height: 14px;
+		position: absolute;
+		top: 87px;
+	}
+
+	@include media('>=widescreen') {
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0 0 0 43px;
+		letter-spacing: 3px;
+	}
 }
 
 .logo {
 	width: 270px;
-	@include display;font: 50px/55px $font-free;
+	@include display;font: 40px/45px $font-free;
 	color: $black;
 	text-decoration: none;
 	margin-right: -35px;
 	letter-spacing: -1px;
 
+	@include media('>=tablet') {
+		@include font(50px,55px);
+	}
+
 	.big {
-		font-size: 57px;
+		font-size: 50px;
+
+		@include media('>=tablet') {
+			font-size: 57px;
+		}
 		letter-spacing: 1px;
 	}
 
 	a {
 		color: $black;
 		text-decoration: none;
+
+		@include media('>=desktop') {
+			color: $white;
+		}
 	}
 
 	img {
@@ -77,7 +146,16 @@
 }
 
 .logo__img {
+	display: block;
+	max-width: 75px;
+	margin: 0 0  0 auto;
+
+	@include media('>=tablet') {
 		max-width: 165px;
-		display: block;
-		margin: 0 0  -9px 4px ;
+		margin: 0 0  -9px 4px;
 	}
+
+	@include media('>=desktop') {
+		margin: 0 0 -20px auto;
+	}
+}

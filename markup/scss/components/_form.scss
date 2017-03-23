@@ -1,0 +1,106 @@
+.contact-form {
+	position: relative;
+
+	label {
+		@include font(18px,22px);
+		color: #af943d;
+		font-weight: 400;
+		margin-bottom: 10px;
+		@include display(bottom);
+
+		@include media('>=desktop') {
+			display: inline;
+			float: left;
+			margin-right: 15px;
+			padding-top: 1px;
+		}
+
+		.chinese {
+			display: block;
+		}
+
+		&.label-center {
+			text-align: center;
+			display: block;
+			vertical-align: top;
+			margin: 0 0 32px;
+
+			@include media('>=desktop') {
+				float: none;
+				display: block;
+			}
+		}
+	}
+
+	.form-group {
+		@include media('>=desktop') {
+			margin:  0 0 20px;
+		}
+	}
+
+	.input-wrap {
+		@include media('>=desktop') {
+			overflow: hidden;
+		}
+	}
+
+	.right {
+		@include media('>=widescreen') {
+			padding-right: 180px;
+		}
+	}
+
+	.btn {
+		padding: 28px 46px;
+		letter-spacing: 1px;
+
+		@include media('>=widescreen') {
+			position: absolute;
+			bottom: 21px;
+			right: 0;
+		}
+	}
+}
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	width: 100%;
+	outline: none;
+	border: 1px solid #b69d4d;
+	background: #f9f9f9;
+	@include font(14px,26px);
+	color: #3e3a39;
+	padding: 4px 15px;
+	margin: 0;
+	display: block;
+	height: 32px;
+
+	@include placeholder {
+		color: #3e3a39;
+	}
+}
+
+textarea {
+	resize: none;
+	height: 150px;
+	overflow-y: auto;
+	margin: 0;
+
+	@include media('>=desktop') {
+		height: 253px;
+		padding: 29px 34px;
+	}
+}
+
+.btn {
+	border-radius: 0;
+	border: 1px solid #b39a48;
+	background: #f9f9f9;
+	@include font(18px,24px);
+	padding: 11px 32px;
+	text-decoration: underline;
+}

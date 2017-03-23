@@ -11,6 +11,34 @@
 		padding: 54px 0;
 	}
 
+	@include media('>=desktop') {
+		background: $white;
+		border-bottom: 4px solid #af943d;
+		padding: 53px 0 0;
+	}
+
+	.social-networks {
+		@include media('>=desktop') {
+			display: block;
+			padding-right: 96px;
+		}
+	}
+
+	.container {
+		max-width: none;
+
+		@include media('>=1400px') {
+			padding: 0 114px;
+		}
+	}
+
+
+	.search-form {
+		@include media('>=desktop') {
+			display: none;
+		}
+	}
+
 	+ * {
 		padding-top: 60px;
 
@@ -26,15 +54,31 @@
 
 	.social-networks {
 		display: none;
+
+		@include media('>=desktop') {
+			display: block;
+		}
+
+
+		li {
+			@include media('>=desktop') {
+				padding: 0 4px;
+			}
+		}
 	}
 }
 
 .header-area {
 	float: left;
 	width: 40px;
+
+	@include media('>=desktop') {
+		float: right;
+		width: 370px;
+	}
 }
 
-.language {
+.lang {
 	left: 15px;
 	position: absolute;
 	top: 0;
@@ -42,6 +86,28 @@
 
 	@include media('>=tablet') {
 		left: 63px;
+	}
+
+	@include media('>=desktop') {
+		right: 58px;
+		left: auto;
+		@include font(18px,26px);
+		color: #8f8f8f;
+	}
+
+	@include media('>=1400px') {
+		right: 155px;		
+	}
+
+
+	a {
+		text-decoration: none;
+		color: #444143;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
 	}
 }
 

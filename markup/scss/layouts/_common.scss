@@ -1,16 +1,107 @@
-.text-block {
-	margin: 0 auto 100px;
-	max-width: 522px;
-	text-align: center;
-	font: 18px/35px $font-free;
-	text-align: center;
 
-	.big-text {
-		@include font(27px,34px);
+.content {
+	@include font(16px,30px);
+	padding: 20px 0;
 
+	@include media('>=tablet') {
+		padding: 40px 0;
+	}
+
+	@include media('>=desktop') {
+		@include font(18px,48px);
+		padding: 76px 0 47px;
 	}
 
 	p {
-		margin: 0 0 14px;
+		@include media('>=tablet') {
+			margin: 0 0 2px;
+		}
 	}
 }
+
+.intro__img {
+	width: 352px;
+	margin: 0 auto 30px;
+
+	@include media('>=tablet') {
+		width: 220px;
+		float: left;
+		margin: 0 20px 20px 0;
+	}
+
+	@include media('>=desktop') {
+		width: 270px;
+		margin: 0 30px 20px 0;
+	}
+
+	@include media('>=widescreen') {
+		width: 352px;
+		margin: 0 60px 20px 0;
+	}
+}
+
+.catogery {
+	@extend %listreset;
+	color: #3e3a39;
+	@include font(0,0);
+	margin: 0 -11px 0;
+
+	li {
+		@include display;
+		@include font(20px,26px);
+		padding: 0 11px 5px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #3e3a39;
+			@include size(2px,23px);
+			left: 0;
+		}
+
+		&:first-child {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	a {
+		color: #3e3a39;
+		text-decoration: none;
+
+		&:hover {
+			color: darken(#3e3a39,20%);
+		}
+	}
+}
+
+
+
+
+.like {
+	float: left;
+	width: 40px;
+
+	a {
+		@include size(36px);
+		border: 1px solid #af943d;
+		border-radius: 50%;
+		color: #af943d;
+		font-size: 19px;
+		display: block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration: none;
+
+		&:hover {
+			background: #af943d;
+			color: $white;
+		}
+	}
+}
+
+

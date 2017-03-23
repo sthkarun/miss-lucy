@@ -30,6 +30,7 @@ img {
 	width: auto !important;
 	max-width: 1170px;
 	padding: 0 15px;
+	margin: 0 auto;
 }
 
 .section {
@@ -37,6 +38,10 @@ img {
 
 	&.section--big-padding {
 		padding: 95px 0;
+	}
+
+	&.section--white {
+		background: $white;
 	}
 }
 
