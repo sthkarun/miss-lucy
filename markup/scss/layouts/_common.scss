@@ -5,6 +5,7 @@
 
 	@include media('>=tablet') {
 		padding: 40px 0;
+		@include font(23px,38px);
 	}
 
 	@include media('>=desktop') {
@@ -12,9 +13,18 @@
 		padding: 76px 0 47px;
 	}
 
+	@include media('>=widescreen') {
+		overflow: hidden;
+		padding: 0 9.2% 0 0;
+	}
+
 	p {
 		@include media('>=tablet') {
 			margin: 0 0 2px;
+		}
+
+		@include media('>=desktop') {
+			margin: 0 0 21px;
 		}
 	}
 }
@@ -80,8 +90,6 @@
 }
 
 
-
-
 .like {
 	float: left;
 	width: 40px;
@@ -104,4 +112,14 @@
 	}
 }
 
+
+
+
+.two-columns {
+	@extend %listreset;
+
+	@include media('>=widescreen') {
+		padding: 192px 0 251px;
+	}
+}
 

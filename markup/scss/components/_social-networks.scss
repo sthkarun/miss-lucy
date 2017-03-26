@@ -1,6 +1,7 @@
 .social-networks {
 	@extend %listreset;
 	text-align: right;
+	margin: 0 -5px;
 
 	@include media('>=desktop') {
 		
@@ -9,7 +10,7 @@
 
 	li {
 		@include display;
-		padding: 0 6px;
+		padding: 0 5px;
 	}
 
 	a {
@@ -24,5 +25,15 @@
 
 	&.social-networks--sidebar {
 		text-align: center;
+
+		@include media('>=desktop') {
+			text-align: left;
+		}
+
+		@include media('>=widescreen') {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
 	}
 }

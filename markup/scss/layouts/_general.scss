@@ -35,9 +35,15 @@ img {
 
 .section {
 	padding: 35px 0;
+	background: $white;
 
 	&.section--big-padding {
-		padding: 95px 0;
+		@include media('>=tablet') {
+			padding: 95px 0;
+		}
+		@include media('>=desktop') {
+			padding: 131px 0 88px;
+		}
 	}
 
 	&.section--white {
@@ -55,4 +61,86 @@ h2 {
 
 h3 {
 	margin: 0 0 15px;	
+}
+
+main {
+	.btn {
+		white-space: normal;
+
+	}
+}
+
+.btn.btn-more {
+	border: 1px solid #af943d;
+	background: $white;
+	@include display;
+	@include font(12px,28px);
+	text-decoration: none;
+	color: #af943d;
+	padding: 3px 34px;
+	position: relative;
+	@include animate(color background border);
+
+	&:hover {
+		background: #af943d;
+		color: $white;
+
+		&:after {
+			@include triangle(18px 16px, #af943d, right);
+		}
+	}
+
+	&:before,
+	&:after  {
+		content: '';
+		position: absolute;
+		@include triangle(18px 16px, #af943d, right);
+		left: 100%;
+		transform: translateY(-50%);
+		top: 50%;
+		margin-left: 1px;
+		@include animate(border);
+	}
+
+	&:after {
+		@include triangle(18px 16px, $white, right);
+		margin-left: 0;
+	}
+}
+
+.btn-like {
+	@include size(36px);
+	background: $white;
+	color: #af943d;
+	border: 1px solid #af943d;
+	@include display;
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	@include font(19px,35px);
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:hover {
+		color:$white;
+		background: #af943d;
+	}
+}
+
+.row.inline {
+	letter-spacing: -8px;
+
+	> * {
+		letter-spacing: 0;
+	}
+
+	[class*="col-"],
+	[class^="col-"] {
+		@include media('>=tablet') {
+			@include display;
+			float: none;
+		}
+	}
 }

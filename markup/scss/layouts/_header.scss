@@ -93,10 +93,12 @@
 		left: auto;
 		@include font(18px,26px);
 		color: #8f8f8f;
+		top: 2px;
 	}
 
 	@include media('>=1400px') {
 		right: 155px;		
+		top: 2px;
 	}
 
 
@@ -111,3 +113,7 @@
 	}
 }
 
+
+.resize-active * {
+	transition: none;
+}

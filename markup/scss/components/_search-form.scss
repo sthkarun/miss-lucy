@@ -41,4 +41,25 @@
 
 .search-from--sidebar {
 	display: none;
+
+	@include media('>=desktop') {
+		display: block;
+		margin: 0 auto 33px;
+		float: none;
+	}
+
+	.form-control,
+	input[type="search"] {
+		background: #f4f3f3;
+		color: #7b7b7b;
+		border: 2px solid #b79e4f;
+
+		@include placeholder {
+			color: #7b7b7b;
+		}
+	}
+
+	button {
+		color: #b79e4f;
+	}
 }

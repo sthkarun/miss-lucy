@@ -8,6 +8,10 @@
 		margin: 0 0 80px;
 	}
 
+	@include media('>=desktop') {
+		margin: 0 0 88px;
+	}
+
 	.heading-1 {
 		@include font(32px,1);
 		text-align: center;
@@ -16,6 +20,10 @@
 
 		@include media('>=tablet') {
 			@include font(72px,1);
+		}
+
+		@include media('>=desktop') {
+			margin: 0 0 18px;
 		}
 	}
 }

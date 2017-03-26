@@ -5,6 +5,15 @@
 	font: 18px/35px $font-free;
 	text-align: center;
 
+	@include media('>=desktop') {
+		max-width: 632px;
+	}
+
+	@include media('>=widescreen') {
+		max-width: none;
+		margin: 0 auto 127px;
+	}
+
 	&--big {
 		max-width: none;
 	}
@@ -16,5 +25,9 @@
 
 	p {
 		margin: 0 0 14px;
+
+		@include media('>=desktop') {
+			margin: 0 0 12px;
+		}
 	}
 }
