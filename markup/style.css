@@ -78,6 +78,7 @@ Theme URI:
 
 .nav__wrap > ul,
 .nav__wrap > ul ul,
+.content-holder ul:not([class]),
 .catogery,
 .two-columns,
 .sidebar__post > ul,
@@ -96,6 +97,7 @@ Theme URI:
 .navigation-single:after,
 .container:after,
 .nav__wrap > ul:after,
+.social-network-holder:after,
 .post__heading:after,
 .article:after,
 .grid-holder:after,
@@ -682,8 +684,8 @@ img.aligncenter {
 a,
 button,
 input[type="submit"] {
-	-webkit-transition: color .3s ease-in-out, background .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out, border .3s ease-in-out;
-	transition: color .3s ease-in-out, background .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out, border .3s ease-in-out;
+	-webkit-transition: color .3s ease-in-out, background .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out, border .3s ease-in-out, box-shadow .3s ease-in-out;
+	transition: color .3s ease-in-out, background .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out, border .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 body {
@@ -1056,6 +1058,74 @@ main .btn {
 	line-height: 30px;
 	font-size: 16px;
 	padding: 20px 0;
+}
+
+.content-holder {
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.content-holder .text-left {
+	letter-spacing: 1.2px;
+}
+
+.content-holder h2,
+.content-holder .heading-2 {
+	line-height: 30px;
+	font-size: 25px;
+	font-weight: 400;
+}
+
+.content-holder h2 a,
+.content-holder .heading-2 a {
+	color: #3e3a39;
+	text-decoration: none;
+}
+
+.content-holder h2 a:hover,
+.content-holder .heading-2 a:hover {
+	text-decoration: none;
+	color: #8d8583;
+}
+
+.content-holder .like {
+	width: 35px;
+	height: 35px;
+	line-height: 34px;
+	font-size: 13px;
+	box-shadow: 1px 1px 0 0 rgba(175, 148, 61, .75);
+	display: block;
+	border-radius: 50%;
+	text-align: center;
+	border: 1px solid transparent;
+	color: #af943d;
+	display: inline-block;
+	vertical-align: top;
+	float: none;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.content-holder .like:hover {
+	border-color: #b29945;
+	box-shadow: none;
+	color: #787878;
+	text-decoration: none;
+}
+
+.content-holder ul:not([class]) {
+	line-height: 24px;
+	font-size: 15px;
+	margin: 0 0 12px;
+}
+
+.content-holder ul:not([class]) li {
+	margin: 0 0 5px;
+}
+
+.content-holder .img {
+	margin: 0 0 13px;
 }
 
 .intro__img {
@@ -1448,6 +1518,40 @@ main .btn {
 
 .social-networks.social-networks--sidebar {
 	text-align: center;
+}
+
+.social-networks.social-networks--content {
+	text-align: center;
+	margin: 0 -3px 10px;
+}
+
+.social-networks.social-networks--content li {
+	padding: 0 3px;
+}
+
+.social-networks.social-networks--content li a {
+	width: 35px;
+	height: 35px;
+	line-height: 34px;
+	font-size: 13px;
+	box-shadow: 1px 1px 0 0 rgba(175, 148, 61, .75);
+	display: block;
+	border-radius: 50%;
+	text-align: center;
+	border: 1px solid transparent;
+	display: inline-block;
+	vertical-align: top;
+	color: #af943d;
+}
+
+.social-networks.social-networks--content li a:hover {
+	border-color: #b29945;
+	box-shadow: none;
+	color: #787878;
+}
+
+.social-network-holder {
+	margin: 0 0 16px;
 }
 
 .search-form {
@@ -1931,6 +2035,17 @@ textarea {
 		margin: 0 0 2px;
 	}
 
+	.like-holder {
+		float: right;
+	}
+
+	.content-holder h2,
+	.content-holder .heading-2 {
+		text-align: left;
+		line-height: 36px;
+		font-size: 28px;
+	}
+
 	.intro__img {
 		width: 220px;
 		float: left;
@@ -2003,6 +2118,13 @@ textarea {
 	.logo__img {
 		max-width: 165px;
 		margin: 0 0  -9px 4px;
+	}
+
+	.social-networks.social-networks--content {
+		float: left;
+		width: 50%;
+		text-align: left;
+		margin: 0;
 	}
 
 	.search-form {
@@ -2211,6 +2333,24 @@ textarea {
 		margin: 0 0 21px;
 	}
 
+	.content-holder h2,
+	.content-holder .heading-2 {
+		line-height: 40px;
+		font-size: 33px;
+		margin: 0 0 29px;
+	}
+
+	.content-holder .like {
+		width: 50px;
+		height: 50px;
+		font-size: 23px;
+		line-height: 49px;
+	}
+
+	.content-holder ul:not([class]) li {
+		margin: 0 0 15px;
+	}
+
 	.intro__img {
 		width: 270px;
 		margin: 0 30px 20px 0;
@@ -2310,6 +2450,13 @@ textarea {
 
 	.social-networks.social-networks--sidebar {
 		text-align: left;
+	}
+
+	.social-networks.social-networks--content li a {
+		width: 50px;
+		height: 50px;
+		font-size: 23px;
+		line-height: 49px;
 	}
 
 	.search-from--sidebar {
@@ -2608,3 +2755,4 @@ textarea {
 		padding: .2em;
 	}
 }
+

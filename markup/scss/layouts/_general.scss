@@ -1,7 +1,7 @@
 a,
 button,
 input[type="submit"] {
-	@include animate(color background opacity visibility border);
+	@include animate(color background opacity visibility border box-shadow);
 } 
 
 
